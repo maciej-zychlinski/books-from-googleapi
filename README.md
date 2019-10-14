@@ -1,6 +1,7 @@
 ## Books from Google API
 
-This web application can interact with the Google Books API.
+This web application can interact with the Google Books API. 
+Check how it works on https://books-from-googleapi.herokuapp.com/
 
 Search and import to this web aplication volumes that contain text string. There are special keywords you can specify in the search terms to search in particular fields, such as:
 * intitle: Returns results where the text following this keyword is found in the title.
