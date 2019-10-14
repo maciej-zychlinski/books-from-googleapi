@@ -1,4 +1,4 @@
-# Books from Google API
+## Books from Google API
 
 This web application can interact with the Google Books API.
 
@@ -11,4 +11,18 @@ Search and import to this web aplication volumes that contain text string. There
 * lccn: Returns results where the text following this keyword is the Library of Congress Control Number.
 * oclc: Returns results where the text following this keyword is the Online Computer Library Center number.
 
+## Using the API
 
+You can perform a volumes search by sending an HTTP GET request to the following URI:
+
+https://<i></i>books-from-googleapi.herokuapp.com/api/v1/volumes/terms/search
+
+There are special keywords you can specify in the search terms to search in particular fields, such as: 
+* title
+* authors
+* language
+* publishedDate
+
+Here is an example of searching for J.R.R. Tolkien books:
+
+https://books-from-googleapi.herokuapp.com/api/v1/volumes/authors/Tolkien
