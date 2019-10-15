@@ -17,16 +17,16 @@ def index():
         query = form.search.data
         field = form.select.data
         if field == "title":
-            database_query = Volumes.query.filter(Volumes.title.like('%{}%'.format(query)))
+            database_query = Volumes.query.filter(Volumes.title.ilike('%{}%'.format(query)))
             return render_template("index.html", volumes=database_query, form=form)
         elif field == "authors":
-            database_query = Volumes.query.filter(Volumes.authors.like('%{}%'.format(query)))
+            database_query = Volumes.query.filter(Volumes.authors.ilike('%{}%'.format(query)))
             return render_template("index.html", volumes=database_query, form=form)
         elif field == "language":
-            database_query = Volumes.query.filter(Volumes.language.like('%{}%'.format(query)))
+            database_query = Volumes.query.filter(Volumes.language.ilike('%{}%'.format(query)))
             return render_template("index.html", volumes=database_query, form=form)
         else:
-            database_query = Volumes.query.filter(Volumes.publishedDate.like('%{}%'.format(query)))
+            database_query = Volumes.query.filter(Volumes.publishedDate.ilike('%{}%'.format(query)))
             return render_template("index.html", volumes=database_query, form=form)
     return render_template("index.html", volumes=volumes, form=form)
 
